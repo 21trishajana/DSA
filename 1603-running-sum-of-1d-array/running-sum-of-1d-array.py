@@ -3,7 +3,7 @@ class Solution:
         ans = [0] * len(nums)
         for i in range(len(nums)):
             if i == 0:
-                ans[i] = nums[i] + ans[i]
+                ans[i] = nums[i]
             else:
-                ans[i] = nums[i] + ans[i-1]
+                ans[i] = ans[i-1] + nums[i]
         return ans
